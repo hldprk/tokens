@@ -1,0 +1,14 @@
+{
+  "name": "tokens",
+  "version": "0.0.1",
+  "description": "A recursive-descent parsing library.",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Holden Perkins",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
