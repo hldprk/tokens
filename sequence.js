@@ -32,6 +32,8 @@ export default class Sequence extends Syntax {
 
 		}
 
+		this.after(state);
+
 	}
 
 	get children() {
@@ -51,6 +53,12 @@ export default class Sequence extends Syntax {
 		const children = this.children;
 
 		return children[children.length - 1].end;
+
+	}
+
+	after(state) {
+
+		this.children.forEach(child => child.after(state));
 
 	}
 

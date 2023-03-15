@@ -107,4 +107,10 @@ export default class Many extends Syntax {
 
 	}
 
+	after(state) {
+
+		this.elements.forEach(e => e.after(state));
+
+	}
+
 }

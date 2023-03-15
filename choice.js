@@ -82,4 +82,10 @@ export default class Choice extends Syntax {
 
 	}
 
+	after(state) {
+
+		if(this.chosen) { this.chosen.after(state); }
+
+	}
+
 }
