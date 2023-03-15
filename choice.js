@@ -29,6 +29,8 @@ export default class Choice extends Syntax {
 				choice.parse(state);
 
 				this.chosen = choice instanceof Choice ? choice.chosen : choice;
+
+				this.after(state);
 	
 				return;
 

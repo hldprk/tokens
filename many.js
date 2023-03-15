@@ -65,6 +65,8 @@ export default class Many extends Syntax {
 			
 		}
 
+		this.after(state);
+
 	}
 
 	/**
