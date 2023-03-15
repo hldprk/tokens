@@ -134,4 +134,14 @@ export default class Syntax {
 
 	}
 
+	/**
+	 * secondary parsing pass - does nothing unless overriden
+	 * @param {State} state 
+	 */
+	after(state) {
+
+		return;
+
+	}
+
 }

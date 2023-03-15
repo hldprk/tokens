@@ -61,6 +61,8 @@ export default class Token extends Syntax {
 
 		}
 
+		this.after(state);
+
 	}
 
 	/**
@@ -181,10 +183,11 @@ export default class Token extends Syntax {
 	 * also returns a class extending `Token` with the given properties
 	 * @param {String} kind 
 	 * @param {String|RegExp|((StateType)=>String)} pattern 
-	 * @param {String} description 
+	 * @param {String} [description] 
+	 * @param {(State) => void} [after]
 	 * @returns {typeof Token}
 	 */
-	static register(kind, pattern, description) {
+	static register(kind, pattern, description, after) {
 
 		Token.Kind[kind] = kind;
 		Token.Pattern[kind] = pattern;
@@ -194,6 +197,8 @@ export default class Token extends Syntax {
 			kind = kind;
 
 			get description() { return description ? description : 'a token'; }
+
+			after(state) { if(after) { after(state) } }
 
 		}
 
