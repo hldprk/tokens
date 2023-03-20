@@ -5,13 +5,14 @@
   "scripts": {
     "test": "node test.js"
   },
+  "main": "./index.js",
   "author": "Holden Perkins",
   "license": "MIT",
   "type": "module",
   "devDependencies": {
     "typescript": "^4.9.5"
   },
-  "main": "\"\"",
+  "exports": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hldprk/tokens.git"
